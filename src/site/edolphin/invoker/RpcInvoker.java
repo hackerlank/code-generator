@@ -1,10 +1,10 @@
 package site.edolphin.invoker;
 
+import java.lang.reflect.Method;
+
 /**
  * Created by edolphin on 16-8-15.
  */
-public class RpcInvoker {
-    public static void invoke(String params) {
-        System.out.println(params);
-    }
+public interface RpcInvoker {
+    Object invoke(Class<?> clazz, Method method, Object... params);
 }
